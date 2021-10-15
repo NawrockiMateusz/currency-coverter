@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/container.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="js/script.js" defer></script>
+    <title>Kantor internetowy</title>
+</head>
+
+<body class="body">
+    <header class="header">
+        <h1>Kantor internetowy</h1>
+    </header>
+    <main class="container">
+        <form class="form">
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">Przelicz walutę</legend>
+                <p class="form__paragraph">
+                    <label>
+                        <span class="form__labelText">
+                            Kwota:
+                        </span>
+                        <input type="number" class="form__input js-amount" min="0">
+                    </label>
+                </p>
+                <p class="form__paragraph">
+                    <label>
+                        <span class="form__labelText">
+                            Wymiana z:
+                        </span>
+                        <select name="currency" class="form__select js-currencyFrom">
+                            <option value="pln">PLN</option>
+                            <option value="eur">EUR</option>
+                            <option value="usd">USD</option>
+                            <option value="gbp">GBP</option>
+                        </select>
+                    </label>
+                </p>
+                <p class="form__paragraph">
+                    <label>
+                        <span class="form__labelText">
+                            Wymiana na:
+                        </span>
+                        <select name="currency" class="form__select js-currencyOn">
+                            <option value="pln">PLN</option>
+                            <option value="eur">EUR</option>
+                            <option value="usd">USD</option>
+                            <option value="gbp">GBP</option>
+                        </select>
+                    </label>
+                </p>
+                <p class="form__paragraph form__paragraph--result">
+                    Po przewalutowaniu otrzymasz: <strong class="form__result js-result">N/A</strong>
+                </p>
+            </fieldset>
+            <button class="form__button js-button">Przelicz</button>
+        </form>
+    </main>
+</body>
+
+</html>
