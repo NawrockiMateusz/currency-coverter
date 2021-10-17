@@ -10,7 +10,7 @@ Currencies have fixed values entered, they are not updated. There will be a futu
 
 ## Demo
 
-To go to the site and convert currency for yourself, click: [here!](https://nawrockimateusz.github.io/currency-coverter/)
+In order to access site and convert currency for yourself, click: [here!](https://nawrockimateusz.github.io/currency-coverter/)
 
 ## How use it?
 
