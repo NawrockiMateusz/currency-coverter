@@ -43,7 +43,7 @@ buttonElement.addEventListener("click", (event) => {
             break;
     }
 
-    resultElement.innerHTML = result.toFixed(2);
+    resultElement.innerText = `Po przewalutowaniu otrzymasz: ${result.toFixed(2)}`
 
 });
 
