@@ -11,7 +11,7 @@ html {
     width: 100%;
     margin: 10px auto;
     text-align: center;
-    background-color: #2E3138;
+    background-image: url(../images/background.jpg);
     color: white;
     font-family: 'Open Sans', sans-serif;
     padding: 10px;
