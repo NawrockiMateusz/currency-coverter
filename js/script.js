@@ -1,53 +1,37 @@
-let amountElement = document.querySelector(".js-amount");
-let currencyFromElement = document.querySelector(".js-currencyFrom");
-let currencyOnElement = document.querySelector(".js-currencyOn");
-let buttonElement = document.querySelector(".js-button");
-let resultElement = document.querySelector(".js-result");
-
-const pln = 1.00;
-const eur = 4.61;
-const usd = 3.97;
-const gbp = 5.41;
-let result;
-
-buttonElement.addEventListener("click", (event) => {
-    event.preventDefault();
-
-    switch (currencyFromElement.value) {
-        case "pln":
-            result = amountElement.value * pln;
-            break;
-        case "eur":
-            result = amountElement.value * eur;
-            break;
-        case "usd":
-            result = amountElement.value * usd;
-            break;
-        case "gbp":
-            result = amountElement.value * gbp;
-            break;
+{
+    const selectCurrency = (currency) => {
+        switch (currency) {
+            case "pln":
+                return 1;
+            case "eur":
+                return 4.6;
+            case "usd":
+                return 3.95;
+            case "gbp":
+                return 5.44;
+        }
     }
 
-    switch (currencyOnElement.value) {
-        case "pln":
-            result /= pln;
-            break;
-        case "eur":
-            result /= eur;
-            break;
-        case "usd":
-            result /= usd;
-            break;
-        case "gbp":
-            result /= gbp;
-            break;
+    const calculateResult = () => {
+        const amountElement = document.querySelector(".js-amount");
+        const currencyFromElement = document.querySelector(".js-currencyFrom");
+        const currencyOnElement = document.querySelector(".js-currencyOn");
+
+        return (amountElement.value * selectCurrency(currencyFromElement.value)) / selectCurrency(currencyOnElement.value);
     }
 
-    resultElement.innerText = `Po przewalutowaniu otrzymasz: ${result.toFixed(2)}`
+    const init = () => {
+        const formElement = document.querySelector(".js-form");
 
-});
+        formElement.addEventListener("submit", (event) => {
+            event.preventDefault();
 
+            const resultElement = document.querySelector(".js-result");
 
+            let result = calculateResult();
+            resultElement.innerText = `Po przewalutowaniu otrzymasz: ${result.toFixed(2)}`
+        });
+    }
 
-
-
+    init();
+}
