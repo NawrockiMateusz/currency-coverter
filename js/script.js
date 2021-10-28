@@ -28,7 +28,7 @@
 
             const resultElement = document.querySelector(".js-result");
 
-            let result = calculateResult();
+            const result = calculateResult();
             resultElement.innerText = `Po przewalutowaniu otrzymasz: ${result.toFixed(2)}`
         });
     }
